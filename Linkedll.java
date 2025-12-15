@@ -1,7 +1,7 @@
 package DSA;
 
 public class Linkedll {
-
+///   creating Node class 
   class Node {
     int data;
     Node next;
@@ -11,11 +11,11 @@ public class Linkedll {
       this.next = null;
     }
   }
-
+ ///  define node head and tail 
   public Node head;
   public Node tail;
 
-  public void addFirst(int data) { // static removed 
+  public void addFirst(int data) { //  keep public this function 
     Node newNode = new Node(data);
 
     if (head == null) {
@@ -39,6 +39,26 @@ public class Linkedll {
       
   }
 
+
+  public void addmid(int idx , int data ){
+
+  if( idx == 0 ){
+    addFirst(data);
+    return ;
+  }
+ Node temp = head ;
+  Node newNode = new Node(data);
+  int i = 0 ;
+  while( i < idx-1){
+
+    temp  = temp.next ;
+    i++;
+  }
+newNode.next = temp.next;
+temp.next = newNode;
+
+  }
+
   public void printLL( ){
 
     if( head == null){
@@ -58,6 +78,7 @@ public class Linkedll {
     Linkedll ll = new Linkedll();
    ll.addFirst(0);
    ll.addLast(1);
+   ll.addmid(1, 1);
    ll.printLL();
 
   }
