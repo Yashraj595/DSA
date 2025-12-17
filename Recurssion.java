@@ -1,9 +1,6 @@
 package DSA;
-
 import java.util.Scanner;
-
 public class Recurssion {
-
   public static int factorial(int n) {
 
     if (n == 0) {
@@ -25,5 +22,6 @@ public class Recurssion {
     int ans = factorial(n);
 
     System.out.println("Factorial is: " + ans);
+     
   }
 }
